@@ -12,5 +12,6 @@ public class EjecutarEstudianteUCC {
         System.out.println(objEstudiante2); //mostrar la informacion que tiene el objeto "objEstudiante2"
 
         //promedio de las edades de los estudiantes
+
     }
 }
