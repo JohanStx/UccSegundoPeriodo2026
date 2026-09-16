@@ -18,8 +18,15 @@ public class Vehiculo {
         this.linea = linea;
     }
 
+    public int calcularAntiguedadVehiculo(int anioActual){
+        return anioActual - modelo;
+        
+    }
+
+
+    //Metodo toString sirve para mostrar como esta creado el objeto
     public String toString(){
-        return "Vehiculo{ Modelo: " + modelo + " Marca: " + marca + " Color: " + color + " Peso: " + peso + " Linea: " + linea;
+        return "Vehiculo{ Modelo: " + modelo + " Marca: " + marca + " Color: " + color + " Peso: " + peso + "kg Linea: " + linea;
         
     }
 
