@@ -16,7 +16,19 @@ public class CuentaBancaria {
         this.clave = clave;
     }
 
-    public String toString(){
-        return "Cuenta bancaria{ saldo: " + saldo + " titular: " + titular + "numero de cuenta: " + numeroCuenta + " tipo de cuenta: " + tipoCuenta + " Clave: " + clave;
+    public int consignacion(int ingreso){
+        saldo = saldo + ingreso;
+        return saldo;
     }
+
+
+    public int retiro(int egreso){
+        saldo = saldo - egreso;
+        return saldo;
+    }
+
+    public String toString(){
+        return "Cuenta bancaria{ Saldo: " + saldo + " Titular: " + titular + " Numero de cuenta: " + numeroCuenta + " Tipo de cuenta: " + tipoCuenta + " Clave: " + clave;
+    }
+
 }
