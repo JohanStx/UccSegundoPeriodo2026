@@ -17,15 +17,25 @@ public class CuentaBancaria {
         
     }
 
-    public double consignacion(double ingreso){
-        saldo = saldo + ingreso;
+    public double consignacion(double valor){
+        saldo = saldo + valor;
         return saldo ;
     }
 
-    public double retiro(double egreso){
-        saldo = saldo - egreso;
-        return saldo;
+    public String retiro(double valor){
+        String msg = "";
+        if (valor > saldo){
+            msg = "No se puede hacer el retiro";
+        }else{
+            msg = (saldo = saldo - valor) + "" ;
+        }
+        return msg;
     }
+
+    public void consularSaldo(){
+        System.out.println("Su saldo actual es: " + saldo);
+    }
+    
 
     public String toString(){
         return "Cuenta bancaria{ Saldo: " + saldo + " Titular: " + titular + " Numero de cuenta: " + numeroCuenta + " Tipo de cuenta: " + tipoCuenta + " id: " + id;
