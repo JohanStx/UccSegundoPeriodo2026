@@ -17,9 +17,14 @@ public class CuentaBancaria {
         
     }
 
-    public double consignacion(double valor){
-        saldo = saldo + valor;
-        return saldo ;
+    public String consignacion(double valor){
+        String msg = "";
+        if (valor < 0){
+            msg = "No se puede hacer la consignacion";
+        }else{
+            msg = (saldo = saldo + valor) + "" ;
+        }
+        return msg;
     }
 
     public String retiro(double valor){
