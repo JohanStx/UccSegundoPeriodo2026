@@ -44,26 +44,34 @@ public class SistemaDeBiblioteca {
         this.anioPublicacion = anioPublicacion;
     }
     
-    public boolean getDisponible(boolean disponible) {
+    public boolean isDisponible() {
         return disponible;
     }
+
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;
     }
 
-    public boolean Prestar(boolean disponibilidad){
-        return this.disponible = false;
-    }
-    public boolean devolver(boolean disponibilidad){
-        return this.disponible = true;
+    public boolean prestar() {
+        this.disponible = false;
+        return this.disponible;
     }
 
-    public String estaDisponible(){
-        return "El libro " + titulo + " esta disponible";
+    public boolean devolver() {
+        this.disponible = true;
+        return this.disponible;
+    }
+
+    public void estaDisponible() {
+        if (disponible) {
+            System.out.println("El libro esta disponible");
+        } else {
+            System.out.println("El libro no esta disponible");
+        }
     }
 
     public String toString() {
-        return "Libro [ isbn: " + isbn + " Titulo: " + titulo + "Autor: " + autor + "AnioPublicacion: " + anioPublicacion + "Disponible: " + disponible + "]";
+        return "Libro [ isbn: " + isbn + " Titulo: " + titulo + " Autor: " + autor + " AnioPublicacion: " + anioPublicacion + " Disponible: " + disponible + "]";
     }
 
 }
