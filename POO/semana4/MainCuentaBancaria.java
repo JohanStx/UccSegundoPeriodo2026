@@ -17,5 +17,7 @@ public class MainCuentaBancaria {
         System.out.println(objCuentaBancaria.retiro(500.0));
         System.out.println(objCuentaBancaria);
         objCuentaBancaria.consularSaldo();
+
+        System.out.println(objCuentaBancaria.consignacion(-50));
     }
 }

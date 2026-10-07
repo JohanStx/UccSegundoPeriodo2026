@@ -44,7 +44,7 @@ public class SistemaDeBiblioteca {
         this.anioPublicacion = anioPublicacion;
     }
     
-    public boolean isDisponible() {
+    public boolean getDisponible() {
         return disponible;
     }
 
@@ -64,9 +64,9 @@ public class SistemaDeBiblioteca {
 
     public void estaDisponible() {
         if (disponible) {
-            System.out.println("El libro esta disponible");
+            System.out.println("El libro '" + titulo + "' esta disponible");
         } else {
-            System.out.println("El libro no esta disponible");
+            System.out.println("El libro '" + titulo + "' no esta disponible");
         }
     }
 
