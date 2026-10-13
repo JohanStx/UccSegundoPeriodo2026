@@ -10,6 +10,11 @@ public class Trabajador {
         this.salario = salario;
     }
 
+    public int getCedula() {
+        return cedula;
+        
+    }
+
     public String getNombre() {
         return nombre;
     }
