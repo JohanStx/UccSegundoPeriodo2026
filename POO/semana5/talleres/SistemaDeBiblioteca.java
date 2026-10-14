@@ -73,5 +73,4 @@ public class SistemaDeBiblioteca {
     public String toString() {
         return "Libro [ isbn: " + isbn + " Titulo: " + titulo + " Autor: " + autor + " AnioPublicacion: " + anioPublicacion + " Disponible: " + disponible + "]";
     }
-
 }
