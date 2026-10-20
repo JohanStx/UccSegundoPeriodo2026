@@ -12,8 +12,13 @@ public class Banco {
         this.cuenta = cuenta;
     }
 
-    public void abrirCuenta(Cliente cliente) {
+    public void abrirCuenta(ClienteB cliente) {
         System.out.println("Apertura de cuenta:" + cliente);
+    }
+
+    @Override
+    public String toString() {
+        return "Banco [nombre= " + nombre + ", direccion= " + direccion + ", cuenta= " + cuenta + "]";
     }
     
 }
