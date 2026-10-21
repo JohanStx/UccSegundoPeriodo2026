@@ -8,15 +8,17 @@ public class MainVenta {
         Foto foto2 = new Foto("foto2.jpg");
         Foto foto3 = new Foto("foto3.jpg");
         Foto[] fotos = {foto1, foto2, foto3};
-        Impresion impresion = new Impresion("Color", fotos, 1);
+        Impresion impresion = new Impresion("A color", fotos, 1);
         Camara camara = new Camara(2, "EOS 5D"," Mark IV");
         Camara camara2 = new Camara(3, "Nikon D850", "FX");
         Producto[] productos = {impresion, camara, camara2};
 
-        Pedido pedido = new Pedido(cliente, productos, "2023-10-01", 123456789);
+        Pago pago = new Efectivo(1021, "10:52", 15000);
+        Pedido pedido = new Pedido(cliente, productos, "2026-10-21", pago);
 
-        System.out.println(pedido);
-
+        pedido.mostrarPedido();
+        System.out.println("--------------------------------------------------");
+        
         Cliente cliente2 = new Cliente("1092463", "Sebastian");
         Foto foto4 = new Foto("foto4.jpg");
         Foto foto5 = new Foto("foto5.jpg");
@@ -25,8 +27,9 @@ public class MainVenta {
         Camara camara3 = new Camara(4, "Canon EOS R5", "Full Frame");
         Producto[] productos2 = {impresion2, camara3};
 
-        Pedido pedido2 = new Pedido(cliente2, producto  
+        Pago pago2 = new Transferencia(511, "2:30", 19000);
+        Pedido pedido2 = new Pedido(cliente2, productos2, "2026-10-21", pago2);
             
-
+        pedido2.mostrarPedido();
     }
 }
