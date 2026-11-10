@@ -1,3 +1,5 @@
+package POO.semana5.talleres;
+
 public class MainVentas {
     public static void main(String[] args) {
         

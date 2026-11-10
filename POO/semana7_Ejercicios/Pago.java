@@ -12,8 +12,6 @@ public class Pago {
         this.valor = valor;
     } 
 
-    
-
     public void pagar() {
 
     }
@@ -23,5 +21,4 @@ public class Pago {
         return "Pago [numeroPago=" + numeroPago + ", hora=" + hora + ", valor=" + valor + "]";
     }
     
-
 }

@@ -11,7 +11,7 @@ public class EstudianteUCC {
     /*Constructor: el constructor de la clase se reconoce porque
     tiene el mismo nombre de la clase y permite darle vida
     al objeto */
-   
+    
     public EstudianteUCC(int id, int cedula, String nombre,
                         String apellido, int edad, double estatura){
         this.id = id;
@@ -28,5 +28,4 @@ public class EstudianteUCC {
                 nombre + " apellido: " + apellido + " edad: " + edad + " estatura: " +
                 estatura;
     }
-
 }
