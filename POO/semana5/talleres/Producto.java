@@ -1,3 +1,5 @@
+package POO.semana5.talleres;
+
 public class Producto {
     
     private int codigo;
