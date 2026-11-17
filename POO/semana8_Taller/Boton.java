@@ -1,27 +1,39 @@
 package POO.semana8_Taller;
 
 public class Boton {
-    private boolean iluminado;
-    private boolean fallando;
 
+    private boolean iluminado;
+    private boolean fallando;  
+    
     public Boton(boolean iluminado, boolean fallando) {
         this.iluminado = iluminado;
         this.fallando = fallando;
     }
 
     public void presionar() {
-        if (fallando == true) {
-            System.out.println("El botón está fallando");
-        } else {
-            System.out.println("El botón ha sido presionado");
+        if (fallando == false && iluminado == false) {
+            iluminar();
         }
     }
-    
+
+    //enciende o apaga la luz del botón
     public void iluminar() {
-        if (iluminado == true) {
-            System.out.println("El botón está iluminado");
-        } else {
-            System.out.println("El botón no está iluminado");
-        }
+        iluminado = !iluminado;
+    }
+
+    public boolean estaIluminado() {
+        return iluminado;
+    }
+
+    public boolean estaFallando() {
+        return fallando;
+    }
+
+    public void setFallando(boolean fallando) {
+        this.fallando = fallando;
+    }
+
+    public void setIluminado(boolean iluminado) {
+        this.iluminado = iluminado;
     }
 }

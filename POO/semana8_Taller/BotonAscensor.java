@@ -1,21 +1,25 @@
 package POO.semana8_Taller;
 
-public class BotonPiso extends Boton { 
-    private int numeroPiso;
-    private Direccion direccion;
+public class BotonAscensor extends Boton {
 
-    public BotonPiso(int numeroPiso, Direccion direccion, boolean iluminado, boolean fallando) {
-        super(iluminado, fallando);
-        this.numeroPiso = numeroPiso;
-        this.direccion = direccion;
+    private int pisoDestino;   
+    private Ascensor ascensor;
+
+    public BotonAscensor(int pisoDestino, Ascensor ascensor) {
+        this.pisoDestino = pisoDestino;
+        this.ascensor = ascensor;
     }
 
+    @Override
     public void presionar() {
-        System.out.println("Se ha presionado el botón del piso " + numeroPiso);
-        if (Direccion == Direccion.subir()) {
-            System.out.println("El ascensor subirá al piso " + numeroPiso);
-            } else (Direccion == Direccion.bajar()) {
-            System.out.println("El ascensor bajará al piso " + numeroPiso);
+        if (estaFallando()) {
+            System.out.println("El boton del piso " + pisoDestino + " no responde (esta fallando).");
+        } else if (estaIluminado()) {
+            System.out.println("El boton del piso " + pisoDestino + " ya estaba presionado.");
+        } else {
+            super.presionar();
+            System.out.println("El boton del piso " + pisoDestino + " presionado (se ilumina).");
+            ascensor.agregarSolicitud(pisoDestino);
         }
     }
 }

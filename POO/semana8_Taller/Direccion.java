@@ -1,29 +1,33 @@
 package POO.semana8_Taller;
 
-public class Direccion { 
-    private boolean subir;
-    private boolean bajar;
+public class Direccion {
 
-    public Direccion(boolean subir, boolean bajar) {
-        this.subir = subir;
-        this.bajar = bajar;
-    }
+    private boolean subiendo;
 
-    public void subida() {
-        subir = true;
-        bajar = false;
-    }
-    
-    public void bajada() {
-        bajar = true;
-        subir = false;
+    public Direccion(boolean subiendo) {
+        this.subiendo = subiendo;
     }
 
-    public getSubir() {
-        return subir;
+    private boolean Subir() {
+        return subiendo;
     }
-    
-    public getBajar() {
-        return bajar;
+
+    private boolean Bajar() {
+        return !subiendo;
+    }
+
+    public boolean estaSubiendo() {
+        return Subir();
+    }
+
+    public void cambiarDireccion() {
+        subiendo = !subiendo;
+    }
+
+    public String toString() {
+        if (Bajar()) {
+            return "BAJANDO";
+        }
+        return "SUBIENDO";
     }
 }

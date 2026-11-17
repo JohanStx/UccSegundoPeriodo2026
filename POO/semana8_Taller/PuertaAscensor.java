@@ -1,15 +1,23 @@
 package POO.semana8_Taller;
 
-public class PuertaAscensor extends Puerta { 
+public class PuertaAscensor extends Puerta {
 
-    public PuertaAscensor(boolean obstaculo) {
-        super(obstaculo);
-    }
+    private boolean abierta;
 
     public void abrirPuerta() {
-        System.out.println("La puerta del ascensor se abre");
+        if (!abierta) {
+            abierta = true;
+            System.out.println("la Puerta del ascensor se abre");
+        }
     }
+
     public void cerrarPuerta() {
-        System.out.println("La puerta del ascensor se cierra");
+        if (abierta) {
+            if (detectarObstaculo()) {
+                mantenerAbierta();
+            }
+            abierta = false;
+            System.out.println("la puerta del ascensor se cierra");
+        }
     }
 }
