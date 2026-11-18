@@ -17,13 +17,12 @@ public class SistemaControl {
         alertas = new Alerta[10];
         cantidadAlertas = 0;
         fallaAvisada = false;
-
         pisos = new Piso[5];
-        pisos[0] = new Piso(1, ascensor);
-        pisos[1] = new Piso(2, ascensor);
-        pisos[2] = new Piso(3, ascensor);
-        pisos[3] = new Piso(4, ascensor);
-        pisos[4] = new Piso(5, ascensor);
+
+        for (int i = 0; i < pisos.length ; i++) {
+            pisos[i] = new Piso(i);
+        }
+        
     }
 
     public void procesarSoliciudes() {

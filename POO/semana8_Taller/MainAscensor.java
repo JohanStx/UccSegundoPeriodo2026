@@ -12,6 +12,7 @@ public class MainAscensor {
         sistema.procesarSoliciudes();
         sistema.procesarSoliciudes();
         sistema.procesarSoliciudes();
-        sistema.procesarSoliciudes();           
+        sistema.procesarSoliciudes();
+                   
     }
 }

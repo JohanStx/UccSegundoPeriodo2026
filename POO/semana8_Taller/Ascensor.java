@@ -14,19 +14,14 @@ public class Ascensor {
 
     public Ascensor() {
         pisoActual = 1;
-        direccion = new Direccion(true);
+        direccion = new Direccion();
         capacidad = 8;
         solicitudes = new int[10];
-        puerta = new PuertaAscensor();
+        puerta = puerta;
         total = 0;
         siguiente = 0;
 
         boton = new BotonAscensor[5];
-        boton[0] = new BotonAscensor(1, this);
-        boton[1] = new BotonAscensor(2, this);
-        boton[2] = new BotonAscensor(3, this);
-        boton[3] = new BotonAscensor(4, this);
-        boton[4] = new BotonAscensor(5, this);
     }
 
     public void mover() {
@@ -54,7 +49,7 @@ public class Ascensor {
     }
 
     public void cambiarDireccion() {
-        direccion.invertir();
+        direccion.cambiarDireccion();
         System.out.println("El ascensor cambia de direccion " + direccion);
     }
 

@@ -4,8 +4,8 @@ public class Direccion {
 
     private boolean subiendo;
 
-    public Direccion(boolean subiendo) {
-        this.subiendo = subiendo;
+    public Direccion() {
+        this.subiendo = true;
     }
 
     private boolean Subir() {

@@ -4,6 +4,11 @@ public class PuertaAscensor extends Puerta {
 
     private boolean abierta;
 
+    public PuertaAscensor(boolean obstaculo, boolean abierta) {
+        super(obstaculo);
+        this.abierta = abierta;
+    }
+
     public void abrirPuerta() {
         if (!abierta) {
             abierta = true;

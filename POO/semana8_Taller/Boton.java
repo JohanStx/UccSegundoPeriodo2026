@@ -5,9 +5,9 @@ public class Boton {
     private boolean iluminado;
     private boolean fallando;  
     
-    public Boton(boolean iluminado, boolean fallando) {
-        this.iluminado = iluminado;
-        this.fallando = fallando;
+    public Boton() {
+        this.iluminado = false;
+        this.fallando = false;
     }
 
     public void presionar() {

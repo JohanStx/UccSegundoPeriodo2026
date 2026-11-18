@@ -6,10 +6,9 @@ public class BotonPiso extends Boton {
     private Direccion direccion; 
     private Ascensor ascensor;
 
-    public BotonPiso(int numeroPiso, Direccion direccion, Ascensor ascensor) {
+    public BotonPiso(boolean iluminado, boolean fallando, int numeroPiso, Direccion direccion) {
         this.numeroPiso = numeroPiso;
         this.direccion = direccion;
-        this.ascensor = ascensor;
     }
 
     @Override

@@ -7,13 +7,13 @@ public class Piso {
     private BotonPiso botonBajada;
     private PuertaPiso puerta;
 
-    public Piso(int numero, Ascensor ascensor) {
+    public Piso(int numero) {
         this.numero = numero;
-        this.botonSubida = new BotonPiso(numero, new Direccion(true), ascensor);
-        this.botonBajada = new BotonPiso(numero, new Direccion(false), ascensor);
-        this.puerta = new PuertaPiso();
+        this.botonSubida = new BotonPiso(false, false, numero, null);
+        this.botonBajada = new BotonPiso(false, false, numero, null);;
+        this.puerta = new PuertaPiso(false, false, numero);
     }
-
+    
     public void solicitarSubida() {
         System.out.println("En el piso " + numero + " alguien llama el ascensor para subir");
         botonSubida.presionar();
