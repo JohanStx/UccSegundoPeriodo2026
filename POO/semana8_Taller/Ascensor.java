@@ -17,11 +17,17 @@ public class Ascensor {
         direccion = new Direccion();
         capacidad = 8;
         solicitudes = new int[10];
-        puerta = puerta;
+        puerta = new PuertaAscensor(false, false);
         total = 0;
         siguiente = 0;
 
         boton = new BotonAscensor[5];
+        boton[0] = new BotonAscensor(false, false, 1, this);
+        boton[1] = new BotonAscensor(false, false, 2, this);
+        boton[2] = new BotonAscensor(false, false, 3, this);
+        boton[3] = new BotonAscensor(false, false, 4, this);
+        boton[4] = new BotonAscensor(false, false, 5, this);
+        
     }
 
     public void mover() {

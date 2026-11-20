@@ -20,7 +20,7 @@ public class SistemaControl {
         pisos = new Piso[5];
 
         for (int i = 0; i < pisos.length ; i++) {
-            pisos[i] = new Piso(i);
+            pisos[i] = new Piso(i + 1, ascensor);
         }
         
     }

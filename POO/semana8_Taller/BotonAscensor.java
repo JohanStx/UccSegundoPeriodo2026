@@ -5,8 +5,11 @@ public class BotonAscensor extends Boton {
     private int pisoDestino;   
     private Ascensor ascensor;
 
-    public BotonAscensor(boolean iluminado, boolean fallando, int pisoDestino) {
+    public BotonAscensor(boolean iluminado, boolean fallando, int pisoDestino, Ascensor ascensor) {
+        setIluminado(iluminado);
+        setFallando(fallando);
         this.pisoDestino = pisoDestino;
+        this.ascensor = ascensor;
     }
 
     @Override

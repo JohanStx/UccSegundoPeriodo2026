@@ -6,10 +6,13 @@ public class BotonPiso extends Boton {
     private Direccion direccion; 
     private Ascensor ascensor;
 
-    public BotonPiso(boolean iluminado, boolean fallando, int numeroPiso, Direccion direccion) {
-        this.numeroPiso = numeroPiso;
-        this.direccion = direccion;
-    }
+    public BotonPiso(boolean iluminado, boolean fallando, int numeroPiso, Direccion direccion, Ascensor ascensor) {
+    setIluminado(iluminado);
+    setFallando(fallando);
+    this.numeroPiso = numeroPiso;
+    this.direccion = direccion;
+    this.ascensor = ascensor;   // <-- esta línea es la que falta
+}   
 
     @Override
     public void presionar() {

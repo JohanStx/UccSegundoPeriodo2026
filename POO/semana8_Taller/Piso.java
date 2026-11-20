@@ -7,10 +7,15 @@ public class Piso {
     private BotonPiso botonBajada;
     private PuertaPiso puerta;
 
-    public Piso(int numero) {
+    public Piso(int numero, Ascensor ascensor) {
         this.numero = numero;
-        this.botonSubida = new BotonPiso(false, false, numero, null);
-        this.botonBajada = new BotonPiso(false, false, numero, null);;
+        
+        Direccion subir = new Direccion();
+        Direccion bajar = new Direccion();
+        bajar.cambiarDireccion();
+        
+        this.botonSubida = new BotonPiso(false, false, numero, subir, ascensor);
+        this.botonBajada = new BotonPiso(false, false, numero, bajar, ascensor);
         this.puerta = new PuertaPiso(false, false, numero);
     }
     
